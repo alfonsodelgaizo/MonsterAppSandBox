@@ -1,10 +1,25 @@
-import "./styles.css";
+import React, { Component } from "react";
+import "./app.css";
 
-export default function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      string: "Hello Alfonso"
+    };
+  }
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <p>{this.state.string}</p>
+          <button onClick={() => this.setState({ string: "Hello Bottone" })}>
+            Change Title
+          </button>
+        </header>
+      </div>
+    );
+  }
 }
+
+export default App;
